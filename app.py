@@ -29,7 +29,7 @@ essay_2 = col2.empty()
 
 async def generate_essay(placeholder, topic, word_count):
     stream = await client.chat.completions.create(
-        model="gpt-3.5-turbo",
+        model="gpt-4o-mini",
         messages=[{"role": "system", "content": "You are a helpful assistant."},
                   {"role": "user", "content": f"Write a {word_count} word essay on {topic}. The first line is a 2-3 word title with an emoji and then include 2 line breaks. For example 'TITLE <emoji> \n \n ' "},],
         stream=True
